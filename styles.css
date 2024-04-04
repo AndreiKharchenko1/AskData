@@ -1,0 +1,70 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #fffff5;
+}
+.chat-container {
+    max-width: 1900px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+.chat-container .chat-box {
+    overflow-y: scroll;
+    max-height: 800px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.chat-container .input-box {
+    display: flex;
+}
+.chat-container .input-box input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #ac6363;
+    margin-right: 5px;
+}
+.chat-container .input-box button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #cbf5a9;
+    color: #853413;
+    cursor: pointer;
+}
+.chat-container .input-box button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+.chat-container .message {
+    display: flex;
+    margin-bottom: 10px;
+}
+.chat-container .message-user {
+    justify-content: flex-end;
+}
+.chat-container .message-bot {
+    justify-content: flex-start;
+}
+.chat-container .message-text {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+.chat-container .message-bot .message-text {
+    margin-left: 10px;
+}
+.chat-container .message-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.FAU-icon {
+    width: 100px;
+    height: 70px;
+    margin-right: 10px;
+}
