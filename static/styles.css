@@ -1,17 +1,18 @@
 body {
     font-family: "Courier New", Courier, monospace;
-    background-color: #fffff5;
+    background-color: #fafafa;
 }
 .chat-container {
     max-width: 1900px;
     margin: 50px auto;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
 }
 .chat-container .chat-box {
     overflow-y: scroll;
     max-height: 800px;
+    min-height: 100px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -24,7 +25,7 @@ body {
     flex: 1;
     padding: 5px;
     border-radius: 5px;
-    border: 2px solid #ac6363;
+    border: 2px solid #ff007f;
     margin-right: 5px;
 }
 .chat-container .input-box button {

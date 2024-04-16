@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../static/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../static/styles.css" id="themeStylesheet">
+    <script src="../static/script.js" defer></script>
+
+    <title>AskData</title>
+</head>
+<body>
+
+<h1>AskData</h1>
+<img src="../static/fau-logo.png" alt="Fau Icon" class="FAU-icon">
+
+<div class="chat-container">
+    <div class="chat-box" id="chat-box">
+        <div class="message message-bot">
+            <img src="../static/icon.png" alt="Bot Icon" class="message-icon">
+            <div class="message-bot">Type a message to start chatting.</div>
+        </div>
+    </div>
+    <div class="input-box">
+        <input type="text" id="user_input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
+</body>
+</html>
