@@ -25,6 +25,12 @@ standard_prompt = ('You are an experienced Data Professional in Enterprise Data 
                    'Always consider your Data Management Experience but remember that you are a chatbot.'
                    'This is the task that they need help with: ')
 
+research_prompt_genetics = ('You are an experienced Geneticist well versed in bioinformatics '
+                   'This is the genetics related question you have been asked to help with: ')
+
+
+research_prompt_socmed = ('You are an experienced Social Media Analyst who knows a lot about the current topics of interest among users '
+                   'This is the social media related question you have been asked to help with: ')
 # get user input and model's response
 while True:
     user_input = input("Chat with AskData... (enter 'stop' to exit): ")
@@ -34,6 +40,11 @@ while True:
         print("Thank you for chatting with AskData.")
         break
 
-    # Generate & print model response
-    response = model.generate_content(standard_prompt + user_input)
+   # Generate & print model response
+    if 'social' in user_input.lower() or 'media' in user_input.lower():
+        response = model.generate_content(research_prompt_socmed + user_input)
+    elif any(keyword in user_input.lower() for keyword in ['genetics', 'bio', 'dna', 'allele', 'snp', 'chromos']):
+        response = model.generate_content(research_prompt_genetics + user_input)
+    else:
+        response = model.generate_content(standard_prompt + user_input)
     print(response.text)
