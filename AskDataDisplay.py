@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
 import google.generativeai as genai
 import os
+from ResponseAugmentation import *
+from QueryAugmentation import *
 
 # loading the .env file so that the API_KEY is available
 from dotenv import load_dotenv
@@ -30,10 +32,18 @@ def index():
 
 @app.route('/ask', methods=['POST'])
 def ask():
+    # get user input
     user_input = request.form['user_input']
+
+    # perform query augmentation on user input
+    user_input = query_augmentation(user_input)
 
     # Generate response
     response = model.generate_content(standard_prompt + user_input)
+
+    # perform response augmentation
+    response = response_augmentation(response)
+
     return response.text
 
 

@@ -1,8 +1,10 @@
 import google.generativeai as genai
 from dotenv import load_dotenv
 import os
+from ResponseAugmentation import *
+from QueryAugmentation import *
 
-#this is to test in the console...
+# this is to test it in the console...
 
 # GOOGLE'S GEMINI API
 
@@ -19,18 +21,12 @@ if not GEMINI_API_KEY:
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
 
-# defining a standard prompt that is submitted with every user input.
+# defining a standard prompt that is submitted with every user input
 standard_prompt = ('You are an experienced Data Professional in Enterprise Data Management '
                    'supporting other data professionals with your experience and knowledge. '
                    'Always consider your Data Management Experience but remember that you are a chatbot.'
-                   'This is the task that they need help with: ')
+                   'This is the data task that they need help with: ')
 
-research_prompt_genetics = ('You are an experienced Geneticist well versed in bioinformatics '
-                   'This is the genetics related question you have been asked to help with: ')
-
-
-research_prompt_socmed = ('You are an experienced Social Media Analyst who knows a lot about the current topics of interest among users '
-                   'This is the social media related question you have been asked to help with: ')
 # get user input and model's response
 while True:
     user_input = input("Chat with AskData... (enter 'stop' to exit): ")
@@ -40,11 +36,14 @@ while True:
         print("Thank you for chatting with AskData.")
         break
 
-   # Generate & print model response
-    if 'social' in user_input.lower() or 'media' in user_input.lower():
-        response = model.generate_content(research_prompt_socmed + user_input)
-    elif any(keyword in user_input.lower() for keyword in ['genetics', 'bio', 'dna', 'allele', 'snp', 'chromos']):
-        response = model.generate_content(research_prompt_genetics + user_input)
-    else:
-        response = model.generate_content(standard_prompt + user_input)
+    # perform query augmentation on user input
+    user_input = query_augmentation(user_input)
+
+    # Generate & print model response
+    response = model.generate_content(standard_prompt + user_input)
+
+    # perform response augmentation
+    response = response_augmentation(response)
+
+    # print final response to user
     print(response.text)
