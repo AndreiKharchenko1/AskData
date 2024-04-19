@@ -1,19 +1,31 @@
 body {
     font-family: "Courier New", Courier, monospace;
-    background-color: #fffff5;
+    background-color: #fafafa;
 }
 .chat-container {
-    max-width: 1900px;
+    width: 75%;
+    max-width: 1900px; /* Set max-width to avoid stretching on larger screens */
     margin: 50px auto;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
+    position: relative;
+    left: 2%; /* Adjust as needed for desired positioning */
 }
+p {
+    color: #000000;
+   
+    font-family: Verdana, Geneva, sans-serif;
+
+    letter-spacing: 1px; 
+}
+aside { float: right; margin: 0 1.5%; width: 30%; }
 .chat-container .chat-box {
     overflow-y: scroll;
     max-height: 800px;
+    min-height: 100px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 3px solid #d3bdbd;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -24,7 +36,7 @@ body {
     flex: 1;
     padding: 5px;
     border-radius: 5px;
-    border: 2px solid #ac6363;
+    border: 2px solid #ff007f;
     margin-right: 5px;
 }
 .chat-container .input-box button {
@@ -50,7 +62,7 @@ body {
     justify-content: flex-start;
 }
 .chat-container .message-text {
-    background-color: #f0f0f0;
+    background-color: #efffec;
     padding: 5px 10px;
     border-radius: 10px;
     max-width: 70%;
@@ -64,7 +76,7 @@ body {
     margin-right: 10px;
 }
 .FAU-icon {
-    width: 100px;
-    height: 70px;
+    width: 50px;
+    height: 35px;
     margin-right: 10px;
 }
