@@ -19,13 +19,13 @@
 
 <div class="chat-container">
     <div class="chat-box" id="chat-box">
-        <div class="message message-bot">
+        <div class="message">
             <img src="../static/icon.png" alt="Bot Icon" class="message-icon">
-            <div class="message-bot">Type a message to start chatting.</div>
+            <div class="message">Type a message to start chatting.</div>
         </div>
     </div>
     <div class="input-box">
-        <input type="text" id="user_input" placeholder="Type your message...">
+        <input type="text" id="user_input" placeholder="Type your message, 'Enter' to send..."  onkeydown="if(event.keyCode === 13) sendMessage()">
         <button onclick="sendMessage()">Send</button>
     </div>
 
