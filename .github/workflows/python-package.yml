@@ -34,6 +34,6 @@ jobs:
     - name: Expose localhost with ngrok
       uses: wabakimi/action-ngrok@v2
       with:
-        authtoken: ${{ 2gLE4hEHA2gc3HdZBeXZj6JjklN_5UMjUvUjdYXdyZUmrCoMr }}
+        authtoken: 2gLE4hEHA2gc3HdZBeXZj6JjklN_5UMjUvUjdYXdyZUmrCoMr 
         command: |
           ngrok http 5000
