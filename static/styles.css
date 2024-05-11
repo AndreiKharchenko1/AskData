@@ -1,6 +1,6 @@
 body {
     font-family: "Courier New", Courier, monospace;
-    background-color: #fafafa;
+    background-color: #f0f0fd;
 }
 .chat-container {
     width: 75%;
@@ -19,13 +19,31 @@ p {
 
     letter-spacing: 1px; 
 }
+.message {
+    background-color: #addfae; /* Light blue background */
+    font-size: 15px; /* Text size */
+    font-family: 'Comic Sans MS', cursive; /* Comic Sans font */
+}
+.bot-icon {
+    width: 30px;
+    height: 30px;
+}
+.message-bot {
+    background-color: #cefcff; /* Light blue background */
+    border: 2px solid rgb(255, 210, 126); /* Orange outline */
+    border-radius: 8px; /* Rounded corners */
+    padding: 8px; /* Padding around the message */
+    margin-bottom: 10px; /* Margin between messages */
+    font-weight: bold; /* Bold text */
+    font-family: 'Comic Sans MS'; /* Comic Sans font */
+}
 aside { float: right; margin: 0 1.5%; width: 30%; }
 .chat-container .chat-box {
     overflow-y: scroll;
     max-height: 800px;
     min-height: 100px;
     padding: 10px;
-    border: 3px solid #d3bdbd;
+    border: 2px solid #d3bdbd;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -36,19 +54,19 @@ aside { float: right; margin: 0 1.5%; width: 30%; }
     flex: 1;
     padding: 5px;
     border-radius: 5px;
-    border: 2px solid #ff007f;
+    border: 4px solid #f152a2;
     margin-right: 5px;
 }
 .chat-container .input-box button {
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    background-color: #cbf5a9;
-    color: #853413;
+    background-color: #dafc8d;
+    color: #cf5524;
     cursor: pointer;
 }
 .chat-container .input-box button:hover {
-    background-color: #0056b3;
+    background-color: #4d8ed3;
     color: white;
 }
 .chat-container .message {
@@ -62,7 +80,7 @@ aside { float: right; margin: 0 1.5%; width: 30%; }
     justify-content: flex-start;
 }
 .chat-container .message-text {
-    background-color: #efffec;
+    background-color: #bee7b7;
     padding: 5px 10px;
     border-radius: 10px;
     max-width: 70%;
