@@ -26,10 +26,19 @@ function sendMessage() {
         var botMessage = document.createElement('div');
         botMessage.classList.add('message-bot');
         var botTimestamp = new Date().toLocaleTimeString();
-        botMessage.textContent = `AskData: ${aiResponse}`;
+        
+        var icon = document.createElement('img');
+        icon.src = '../static/icon.png'; // Add your icon's URL here
+        icon.classList.add('bot-icon');
+        botMessage.appendChild(icon);
+
+        var text = document.createElement('span');
+        text.innerHTML = '<span style="color: #089799;">AskData: </span><span style="color: #5e3101;">' + aiResponse + '</span>';
+        botMessage.appendChild(text);
+        
         chatBox.appendChild(botMessage);
 
-        document.getElementById('user-input').value = '';
+        document.getElementById('user_input').value = '';
         chatBox.scrollTop = chatBox.scrollHeight;
     })
     .catch(error => {
