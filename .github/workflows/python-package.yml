@@ -1,5 +1,3 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 name: Python package
 
 on:
@@ -10,7 +8,9 @@ on:
 
 jobs:
   deploy:
+
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -25,7 +25,6 @@ jobs:
           pip install google-cloud-aiplatform
           pip install python-dotenv
           pip install flask
-          # Add any additional dependencies here
       - name: Build package
         run: python -m build
       - name: Run AskDataDisplay.py
@@ -34,9 +33,11 @@ jobs:
         run: |
           cd path/to/your/project  # Navigate to your project directory
           python setup.py install  # Install the project using setup.py
+      - name: Install ngrok
+        run: |
+          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+          unzip ngrok-stable-linux-amd64.zip
       - name: Expose localhost with ngrok
-        uses: wabakimi/action-ngrok@v2
-        with:
-          authtoken: 2gLE4hEHA2gc3HdZBeXZj6JjklN_5UMjUvUjdYXdyZUmrCoMr
-          command: |
-            ngrok http 5000
+        run: |
+          ./ngrok authtoken 2gLE4hEHA2gc3HdZBeXZj6JjklN_5UMjUvUjdYXdyZUmrCoMr
+          ./ngrok http 5000
