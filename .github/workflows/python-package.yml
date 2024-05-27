@@ -33,10 +33,10 @@ jobs:
       - name: Install project
         run: |
           python setup.py install  # Install the project using setup.py
-      - name: Install ngrok
+      - name: Install latest ngrok
         run: |
-          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-          unzip ngrok-stable-linux-amd64.zip
+          wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+          tar xvzf ngrok-v3-stable-linux-amd64.tgz
       - name: Expose localhost with ngrok
         run: |
           ./ngrok authtoken 2gLE4hEHA2gc3HdZBeXZj6JjklN_5UMjUvUjdYXdyZUmrCoMr
