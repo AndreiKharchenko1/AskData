@@ -31,7 +31,6 @@ jobs:
           nohup python AskDataDisplay.py &
       - name: Install project
         run: |
-          cd path/to/your/project  # Navigate to your project directory
           python setup.py install  # Install the project using setup.py
       - name: Install ngrok
         run: |
