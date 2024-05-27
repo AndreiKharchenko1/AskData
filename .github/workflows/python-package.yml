@@ -8,7 +8,6 @@ on:
 
 jobs:
   deploy:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -27,8 +26,9 @@ jobs:
           pip install flask
       - name: Build package
         run: python -m build
-      - name: Run AskDataDisplay.py
-        run: python AskDataDisplay.py
+      - name: Run AskDataDisplay.py in background
+        run: |
+          nohup python AskDataDisplay.py &
       - name: Install project
         run: |
           cd path/to/your/project  # Navigate to your project directory
