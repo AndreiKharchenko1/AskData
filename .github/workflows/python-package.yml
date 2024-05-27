@@ -30,6 +30,10 @@ jobs:
       - name: Run AskDataDisplay.py in background
         run: |
           nohup python AskDataDisplay.py &
+          sleep 10  # Give the server some time to start
+      - name: Check if Flask app is running
+        run: |
+          curl -f http://127.0.0.1:5000 || { echo "Flask app is not running"; exit 1; }
       - name: Install project
         run: |
           python setup.py install  # Install the project using setup.py
@@ -40,4 +44,6 @@ jobs:
       - name: Expose localhost with ngrok
         run: |
           ./ngrok authtoken 2gLE4hEHA2gc3HdZBeXZj6JjklN_5UMjUvUjdYXdyZUmrCoMr
-          ./ngrok http 5000
+          ./ngrok http 5000 &
+          sleep 5
+          curl -f http://127.0.0.1:4040/api/tunnels || { echo "ngrok is not running"; exit 1; }
