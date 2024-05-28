@@ -1,78 +1,83 @@
-from flask import Flask, render_template, request
+from flask import Flask, request, render_template, jsonify
 import google.generativeai as genai
 import os
-from ResponseAugmentation import *
-from QueryAugmentation import *
-from BusinessDomains import *
-
-# loading the .env file so that the API_KEY is available
 from dotenv import load_dotenv
-load_dotenv()
+from DataWrangler import DataWrangler
 
+# Load environment variables
+load_dotenv()
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
 if not GEMINI_API_KEY:
     print("GEMINI_API_KEY is not set. Please set the environment variable.")
     exit()
 
-# the rest:
+# File paths for the CSV files
+file_paths = {
+    'clinic_location_table': '/Users/danielazafrani/AskData/data/clinic_location_table_DP.csv',
+    'clinic_profitability_table': '/Users/danielazafrani/AskData/data/clinic_profitability_table_DP.csv',
+    'employee_table': '/Users/danielazafrani/AskData/data/employee_table_DP.csv',
+    'patient_appointment_table': '/Users/danielazafrani/AskData/data/patient_appointment_table_DP.csv',
+    'patient_table': '/Users/danielazafrani/AskData/data/patient_table_DP.csv',
+    'physician_table': '/Users/danielazafrani/AskData/data/physician_table_DP.csv',
+    'treatments_costs_table': '/Users/danielazafrani/AskData/data/treatments_costs table_DP.csv'
+}
+
+# Initialize DataWrangler
+data_wrangler = DataWrangler(file_paths)
+
 app = Flask(__name__)
 
+# Configure Gemini API
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
 
 standard_prompt = ('You are an experienced Data Professional in Enterprise Data Management '
                    'supporting other data professionals with your experience and knowledge. '
-                   'You are trained to help Data Professionals at Ketchup Clinic, an extensive' 
+                   'You are trained to help Data Professionals at Ketchup Clinic, an extensive'
                    ' Clinic System that spans the US, and should help the employees in their everyday data tasks.'
                    'Always consider your Data Management Experience but remember that you are a chatbot.'
-                   'This is the task that their question: ')
+                   'Generate a SQL query to address the following task: ')
 
-domain_prompt = ('You are an experienced Data Professional in Enterprise Data Management '
-                 'supporting other data professionals with your experience and knowledge. '
-                 'You are trained to help Data Professionals at Ketchup Clinic, an extensive'
-                 ' Clinic System that spans the US, and should help the employees in their everyday data tasks.'
-                 'Always consider your Data Management Experience but remember that you are a chatbot.'
-                 'Consider that their question is related to the {} department of Ketchup Clinic.'
-                 'This is their question: ')
-
+@app.before_request
+def initialize():
+    if data_wrangler.conn is None:
+        data_wrangler.initialize_db()
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-
 @app.route('/ask', methods=['POST'])
 def ask():
-    global domain_prompt, standard_prompt
-    # get user input
     user_input = request.form['user_input']
+    response = ""
 
-    # perform query augmentation on user input
-    user_input_augmented = query_augmentation(user_input)
-
-    if user_input_augmented == 'invalid':
-        response = 'Invalid input. Please try again with a question that is related to Data Management.'
-    else:
-        # check for business domains
-        business_domain = get_business_domain(user_input)
-
-        if business_domain == 'no domain':
-            # Generate response
-            response = model.generate_content(standard_prompt + user_input_augmented)
-            response = response.text
+    try:
+        if user_input.lower().startswith("list columns in"):
+            table_name = user_input.split()[-1]
+            response = data_wrangler.list_columns(table_name)
+        elif user_input.lower().startswith("list tables"):
+            response = data_wrangler.get_table_names()
         else:
-            # generate domain-specific response
-            domain_prompt = domain_prompt.format(business_domain)
-            response = model.generate_content(domain_prompt + user_input_augmented)
-            response = response.text
+            user_input_augmented = user_input  # Placeholder for actual query augmentation
+            prompt = standard_prompt + user_input_augmented
+            generated_sql = model.generate_content(prompt).text
+            print("Generated SQL:", generated_sql)
+            clean_sql = generated_sql.replace("```sql", "").replace("```", "").strip()
+            if not clean_sql.lower().startswith('select'):
+                raise ValueError("Generated SQL is not a SELECT statement.")
+            response = data_wrangler.execute_sql_query(clean_sql)
 
+        response = response_augmentation(response)
 
-    # perform response augmentation
-    response = response_augmentation(response)
+    except Exception as e:
+        response = f"An error occurred: {str(e)}"
 
+    return jsonify(response)
+
+def response_augmentation(response):
     return response
-
 
 if __name__ == '__main__':
     app.run(debug=True)
