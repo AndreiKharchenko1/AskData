@@ -16,6 +16,7 @@ def get_business_domain(user_input):
     else:
         return selected_business_domain
 
+#example
 user_input_test = 'I want to build a finance PowerBI report.'
 business_domain = get_business_domain(user_input_test)
 print(business_domain)

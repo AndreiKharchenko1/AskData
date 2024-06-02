@@ -9,9 +9,18 @@ def keyword_check(user_input):
             return 'invalid'
     return user_input
 
+def modelCheck(user_input):
+    # call AI model here
+    return user_input
+
 
 def query_augmentation(user_input):
-    return keyword_check(user_input)
+    keywordCheckResult = keyword_check(user_input)
+    if keywordCheckResult == 'invalid':
+        result = modelCheck(user_input)
+    else:
+        result = keywordCheckResult
+    return result
 
 
 user_input_test = 'I like shotguns.'

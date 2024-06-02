@@ -4,6 +4,8 @@ import os
 from ResponseAugmentation import *
 from QueryAugmentation import *
 from BusinessDomains import *
+from outputValidation import *
+from promptAugmentation import *
 
 # loading the .env file so that the API_KEY is available
 from dotenv import load_dotenv
@@ -64,12 +66,16 @@ def ask():
         else:
             # generate domain-specific response
             domain_prompt = domain_prompt.format(business_domain)
-            response = model.generate_content(domain_prompt + user_input_augmented)
+            augmentedPrompt = promptAugmentation(domain_prompt, user_input_augmented, business_domain)
+            response = model.generate_content(augmentedPrompt)
             response = response.text
 
 
     # perform response augmentation
     response = response_augmentation(response)
+
+    # perform response validation
+    response = outputValidation(response)
 
     return response
 
