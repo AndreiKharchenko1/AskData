@@ -2,6 +2,12 @@ body {
     font-family: "Courier New", Courier, monospace;
     background-color: #f0f0fd;
 }
+h1 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 30px;
+    color: #000000;
+
+}
 .chat-container {
     width: 75%;
     max-width: 1900px; /* Set max-width to avoid stretching on larger screens */
@@ -9,6 +15,7 @@ body {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
+    height: 100vh;
     position: relative;
     left: 2%; /* Adjust as needed for desired positioning */
 }
@@ -18,6 +25,21 @@ p {
     font-family: Verdana, Geneva, sans-serif;
 
     letter-spacing: 1px; 
+}
+.center {
+    text-align: center;
+}
+.chat-box::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: purple; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the scrollbar track */
 }
 .message {
     background-color: #addfae; /* Light blue background */
@@ -61,8 +83,9 @@ aside { float: right; margin: 0 1.5%; width: 30%; }
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    background-color: #dafc8d;
-    color: #cf5524;
+    font-style: bold;
+    background-color: #27b913;
+    color: hsl(17, 100%, 95%);
     cursor: pointer;
 }
 .chat-container .input-box button:hover {
