@@ -7,3 +7,4 @@ langchain-community~=0.0.20
 langchain-core~=0.1.23
 langchain~=0.0.354
 google-generativeai~=0.4.0
+pandas==2.2.2
