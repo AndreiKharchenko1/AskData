@@ -62,13 +62,13 @@ def ask():
         if business_domain == 'no domain':
             # Generate response using Data Wrangler
             data_response = dw.generate_response(user_input)
-            response = model.generate_content(standard_prompt + user_input_augmented + data_response)
+            response = model.generate_content(standard_prompt + user_input_augmented + '\n' + data_response)
             response = response.text
         else:
             # generate domain-specific response
             domain_prompt = domain_prompt.format(business_domain)
             data_response = dw.generate_response(user_input)
-            response = model.generate_content(domain_prompt + user_input_augmented + data_response)
+            response = model.generate_content(domain_prompt + user_input_augmented + '\n' + data_response)
             response = response.text
 
     # perform response augmentation
