@@ -1,0 +1,134 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-image: url("https://i.imgur.com/0y8H5CV.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h1 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 30px;
+    color: #000000;
+
+}
+.chat-container {
+    width: 75%;
+    max-width: 1900px; /* Set max-width to avoid stretching on larger screens */
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    height: 100vh;
+    position: relative;
+    left: 2%; /* Adjust as needed for desired positioning */
+    background-color: rgb(251, 255, 240);
+}
+p {
+    color: #000000;
+   
+    font-family: Verdana, Geneva, sans-serif;
+
+    letter-spacing: 1px; 
+}
+.center {
+    text-align: center;
+}
+.chat-box::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: purple; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the scrollbar track */
+}
+.message {
+    background-color: #addfae; /* Light blue background */
+    font-size: 15px; /* Text size */
+    font-family: 'Comic Sans MS', cursive; /* Comic Sans font */
+}
+.bot-icon {
+    width: 30px;
+    height: 30px;
+}
+.message-bot {
+    background-color: #cefcff; /* Light blue background */
+    border: 2px solid rgb(255, 210, 126); /* Orange outline */
+    border-radius: 8px; /* Rounded corners */
+    padding: 8px; /* Padding around the message */
+    margin-bottom: 10px; /* Margin between messages */
+    font-weight: bold; /* Bold text */
+    font-family: 'Comic Sans MS'; /* Comic Sans font */
+}
+aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 1.5%;
+    width: 30%;
+    z-index: 1; /* Ensures the aside is on top of other content */
+}
+.chat-container .chat-box {
+    overflow-y: scroll;
+    max-height: 800px;
+    min-height: 100px;
+    padding: 10px;
+    border: 2px solid #d3bdbd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.chat-container .input-box {
+    display: flex;
+}
+.chat-container .input-box input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border-radius: 5px;
+    border: 4px solid #f152a2;
+    margin-right: 5px;
+}
+.chat-container .input-box button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-style: bold;
+    background-color: #27b913;
+    color: hsl(17, 100%, 95%);
+    cursor: pointer;
+}
+.chat-container .input-box button:hover {
+    background-color: #4d8ed3;
+    color: white;
+}
+.chat-container .message {
+    display: flex;
+    margin-bottom: 10px;
+}
+.chat-container .message-user {
+    justify-content: flex-end;
+}
+.chat-container .message-bot {
+    justify-content: flex-start;
+}
+.chat-container .message-text {
+    background-color: #bee7b7;
+    padding: 5px 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+.chat-container .message-bot .message-text {
+    margin-left: 10px;
+}
+.chat-container .message-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.FAU-icon {
+    width: 50px;
+    height: 35px;
+    margin-right: 10px;
+}

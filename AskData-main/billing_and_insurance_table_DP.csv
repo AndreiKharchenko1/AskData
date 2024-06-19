@@ -1,0 +1,151 @@
+﻿billing_id,patient_id,BlueCross BlueShield,policy_number,billing_date,amount_billed,amount_paid,outstanding_amount,billing_status
+1,1,Aetna,H123456789,4/20/2024,150,150,0,Paid
+2,2,Cigna,B987654321,4/21/2024,200,100,100,Partially Paid
+3,3,UnitedHealthcare,A123498765,4/22/2024,250,250,0,Paid
+4,4,Humana,C112233445,4/23/2024,300,0,300,Unpaid
+5,5,Anthem,U998877665,4/24/2024,180,180,0,Paid
+6,6,Kaiser Permanente,D998877665,4/25/2024,210,210,0,Paid
+7,7,Molina Healthcare,E998877665,4/26/2024,190,150,40,Partially Paid
+8,8,Centene Corporation,F998877665,4/27/2024,280,280,0,Paid
+9,9,Oscar Health,G998877665,4/28/2024,320,250,70,Partially Paid
+10,10,Ambetter Health,J998877665,4/29/2024,400,0,400,Unpaid
+11,11,WellCare Health Plans,K998877665,4/30/2024,180,180,0,Paid
+12,12,Florida Blue,L998877665,5/1/2024,220,220,0,Paid
+13,13,Health Net,M998877665,5/2/2024,250,200,50,Partially Paid
+14,14,CVS Health,N998877665,5/3/2024,300,0,300,Unpaid
+15,15,CareFirst BlueCross BlueShield,O998877665,5/4/2024,350,350,0,Paid
+16,16,Highmark Health,P998877665,5/5/2024,180,100,80,Partially Paid
+17,17,EmblemHealth,Q998877665,5/6/2024,200,200,0,Paid
+18,18,Blue Shield of California,R998877665,5/7/2024,240,240,0,Paid
+19,19,HealthPartners,S998877665,5/8/2024,280,280,0,Paid
+20,20,Tufts Health Plan,T998877665,5/9/2024,320,200,120,Partially Paid
+21,21,UPMC Health Plan,U998877665,5/10/2024,400,400,0,Paid
+22,22,Harvard Pilgrim Health Care,V998877665,5/11/2024,180,0,180,Unpaid
+23,23,Geisinger Health Plan,W998877665,5/12/2024,210,210,0,Paid
+24,24,Medica,X998877665,5/13/2024,190,150,40,Partially Paid
+25,25,Providence Health Plan,Y998877665,5/14/2024,280,280,0,Paid
+26,26,Priority Health,Z998877665,5/15/2024,320,250,70,Partially Paid
+27,27,Blue Cross and Blue Shield of Minnesota,AA998877665,5/16/2024,400,0,400,Unpaid
+28,28,SelectHealth,BB998877665,5/17/2024,180,180,0,Paid
+29,29,Health Alliance Plan (HAP),CC998877665,5/18/2024,220,220,0,Paid
+30,30,Blue Cross Blue Shield of Michigan,DD998877665,5/19/2024,250,200,50,Partially Paid
+31,31,Premera Blue Cross,EE998877665,5/20/2024,300,0,300,Unpaid
+32,32,Independence Blue Cross,FF998877665,5/21/2024,350,350,0,Paid
+33,33,Regence BlueShield,GG998877665,5/22/2024,180,100,80,Partially Paid
+34,34,Blue Cross Blue Shield of Nebraska,HH998877665,5/23/2024,200,200,0,Paid
+35,35,Cambia Health Solutions,II998877665,5/24/2024,240,240,0,Paid
+36,36,Blue Cross Blue Shield of North Carolina,JJ998877665,5/25/2024,280,280,0,Paid
+37,37,Blue Cross Blue Shield of Illinois,KK998877665,5/26/2024,320,200,120,Partially Paid
+38,38,Blue Cross Blue Shield of Arizona,LL998877665,5/27/2024,400,400,0,Paid
+39,39,Blue Cross Blue Shield of Texas,MM998877665,5/28/2024,180,0,180,Unpaid
+40,40,Blue Cross Blue Shield of Massachusetts,NN998877665,5/29/2024,210,210,0,Paid
+41,41,Blue Cross Blue Shield of Florida,OO998877665,5/30/2024,190,150,40,Partially Paid
+42,42,Blue Cross Blue Shield of Alabama,PP998877665,5/31/2024,280,280,0,Paid
+43,43,Blue Cross Blue Shield of Georgia,QQ998877665,6/1/2024,320,250,70,Partially Paid
+44,44,Blue Cross Blue Shield of Kansas,RR998877665,6/2/2024,400,0,400,Unpaid
+45,45,Blue Cross Blue Shield of New Mexico,SS998877665,6/3/2024,180,180,0,Paid
+46,46,Blue Cross Blue Shield of South Carolina,TT998877665,6/4/2024,220,220,0,Paid
+47,47,Blue Cross Blue Shield of Tennessee,UU998877665,6/5/2024,250,200,50,Partially Paid
+48,48,Blue Cross Blue Shield of Wisconsin,VV998877665,6/6/2024,300,0,300,Unpaid
+49,49,Blue Cross Blue Shield of Virginia,WW998877665,6/7/2024,350,350,0,Paid
+50,50,Blue Cross Blue Shield of Louisiana,XX998877665,6/8/2024,180,100,80,Partially Paid
+51,51,Blue Cross Blue Shield of Oklahoma,YY998877665,6/9/2024,200,200,0,Paid
+52,52,Blue Cross Blue Shield of Mississippi,ZZ998877665,6/10/2024,240,240,0,Paid
+53,53,Blue Cross Blue Shield of Arkansas,AAA998877665,6/11/2024,280,280,0,Paid
+54,54,Blue Cross Blue Shield of Missouri,BBB998877665,6/12/2024,320,200,120,Partially Paid
+55,55,Blue Cross Blue Shield of Iowa,CCC998877665,6/13/2024,400,400,0,Paid
+56,56,Blue Cross Blue Shield of Kentucky,DDD998877665,6/14/2024,180,0,180,Unpaid
+57,57,Blue Cross Blue Shield of Maryland,EEE998877665,6/15/2024,210,210,0,Paid
+58,58,Blue Cross Blue Shield of Maine,FFF998877665,6/16/2024,190,150,40,Partially Paid
+59,59,Blue Cross Blue Shield of New Hampshire,GGG998877665,6/17/2024,280,280,0,Paid
+60,60,Blue Cross Blue Shield of Vermont,HHH998877665,6/18/2024,320,250,70,Partially Paid
+61,61,Blue Cross Blue Shield of Rhode Island,III998877665,6/19/2024,400,0,400,Unpaid
+62,62,Blue Cross Blue Shield of Delaware,JJJ998877665,6/20/2024,180,180,0,Paid
+63,63,Blue Cross Blue Shield of West Virginia,KKK998877665,6/21/2024,220,220,0,Paid
+64,64,Blue Cross Blue Shield of Montana,LLL998877665,6/22/2024,250,200,50,Partially Paid
+65,65,Blue Cross Blue Shield of Wyoming,MMM998877665,6/23/2024,300,0,300,Unpaid
+66,66,Blue Cross Blue Shield of Alaska,NNN998877665,6/24/2024,350,350,0,Paid
+67,67,Blue Cross Blue Shield of Hawaii,OOO998877665,6/25/2024,180,100,80,Partially Paid
+68,68,Blue Cross Blue Shield of Idaho,PPP998877665,6/26/2024,200,200,0,Paid
+69,69,Blue Cross Blue Shield of North Dakota,QQQ998877665,6/27/2024,240,240,0,Paid
+70,70,Blue Cross Blue Shield of South Dakota,RRR998877665,6/28/2024,280,280,0,Paid
+71,71,Blue Cross Blue Shield of Utah,SSS998877665,6/29/2024,320,200,120,Partially Paid
+72,72,Blue Cross Blue Shield of Nevada,TTT998877665,6/30/2024,400,400,0,Paid
+73,73,Blue Cross Blue Shield of Oregon,UUU998877665,7/1/2024,180,0,180,Unpaid
+74,74,Blue Cross Blue Shield of Washington,VVV998877665,7/2/2024,210,210,0,Paid
+75,75,Blue Cross Blue Shield of Colorado,WWW998877665,7/3/2024,190,150,40,Partially Paid
+76,76,Blue Cross Blue Shield of New York,XXX998877665,7/4/2024,280,280,0,Paid
+77,77,Blue Cross Blue Shield of Pennsylvania,YYY998877665,7/5/2024,320,250,70,Partially Paid
+78,78,Blue Cross Blue Shield of Ohio,ZZZ998877665,7/6/2024,400,0,400,Unpaid
+79,79,Blue Cross Blue Shield of Indiana,AAAA998877665,7/7/2024,180,180,0,Paid
+80,80,Blue Cross Blue Shield of Michigan,BBBB998877665,7/8/2024,220,220,0,Paid
+81,81,Blue Cross Blue Shield of Wisconsin,CCCC998877665,7/9/2024,250,200,50,Partially Paid
+82,82,Blue Cross Blue Shield of Illinois,DDDD998877665,7/10/2024,300,0,300,Unpaid
+83,83,Blue Cross Blue Shield of Minnesota,EEEE998877665,7/11/2024,350,350,0,Paid
+84,84,Blue Cross Blue Shield of Nebraska,FFFF998877665,7/12/2024,180,100,80,Partially Paid
+85,85,Blue Cross Blue Shield of Kansas,GGGG998877665,7/13/2024,200,200,0,Paid
+86,86,Blue Cross Blue Shield of Texas,HHHH998877665,7/14/2024,240,240,0,Paid
+87,87,Blue Cross Blue Shield of Arizona,IIII998877665,7/15/2024,280,280,0,Paid
+88,88,Blue Cross Blue Shield of New Mexico,JJJJ998877665,7/16/2024,320,200,120,Partially Paid
+89,89,Blue Cross Blue Shield of Louisiana,KKKK998877665,7/17/2024,400,400,0,Paid
+90,90,Blue Cross Blue Shield of Oklahoma,LLLL998877665,7/18/2024,180,0,180,Unpaid
+91,91,Blue Cross Blue Shield of Mississippi,MMMM998877665,7/19/2024,210,210,0,Paid
+92,92,Blue Cross Blue Shield of Arkansas,NNNN998877665,7/20/2024,190,150,40,Partially Paid
+93,93,Blue Cross Blue Shield of Missouri,OOOO998877665,7/21/2024,280,280,0,Paid
+94,94,Blue Cross Blue Shield of Iowa,PPPP998877665,7/22/2024,320,250,70,Partially Paid
+95,95,Blue Cross Blue Shield of Kentucky,QQQQ998877665,7/23/2024,400,0,400,Unpaid
+96,96,Blue Cross Blue Shield of Maryland,RRRR998877665,7/24/2024,180,180,0,Paid
+97,97,Blue Cross Blue Shield of Maine,SSSS998877665,7/25/2024,220,220,0,Paid
+98,98,Blue Cross Blue Shield of New Hampshire,TTTT998877665,7/26/2024,250,200,50,Partially Paid
+99,99,Blue Cross Blue Shield of Vermont,UUUU998877665,7/27/2024,300,0,300,Unpaid
+100,100,Cigna,VVVV998877665,7/28/2024,350,350,0,Paid
+101,101,UnitedHealthcare,WWWW998877665,7/29/2024,180,100,80,Partially Paid
+102,102,BlueCross BlueShield,XXXX998877665,7/30/2024,200,200,0,Paid
+103,103,Aetna,YYYY998877665,7/31/2024,240,240,0,Paid
+104,104,Humana,ZZZZ998877665,8/1/2024,280,280,0,Paid
+105,105,Anthem,AAAAA998877665,8/2/2024,320,200,120,Partially Paid
+106,106,Kaiser Permanente,BBBBB998877665,8/3/2024,400,400,0,Paid
+107,107,Molina Healthcare,CCCCC998877665,8/4/2024,180,0,180,Unpaid
+108,108,Centene Corporation,DDDDD998877665,8/5/2024,210,210,0,Paid
+109,109,Oscar Health,EEEE998877665,8/6/2024,190,150,40,Partially Paid
+110,110,Ambetter Health,FFFF998877665,8/7/2024,280,280,0,Paid
+111,111,WellCare Health Plans,GGGG998877665,8/8/2024,320,250,70,Partially Paid
+112,112,Florida Blue,HHHH998877665,8/9/2024,400,0,400,Unpaid
+113,113,Health Net,IIII998877665,8/10/2024,180,180,0,Paid
+114,114,CVS Health,JJJJ998877665,8/11/2024,220,220,0,Paid
+115,115,CareFirst BlueCross BlueShield,KKKK998877665,8/12/2024,250,200,50,Partially Paid
+116,116,Highmark Health,LLLL998877665,8/13/2024,300,0,300,Unpaid
+117,117,EmblemHealth,MMMM998877665,8/14/2024,350,350,0,Paid
+118,118,Blue Shield of California,NNNN998877665,8/15/2024,180,100,80,Partially Paid
+119,119,HealthPartners,OOOO998877665,8/16/2024,200,200,0,Paid
+120,120,Tufts Health Plan,PPPP998877665,8/17/2024,240,240,0,Paid
+121,121,UPMC Health Plan,QQQQ998877665,8/18/2024,280,280,0,Paid
+122,122,Harvard Pilgrim Health Care,RRRR998877665,8/19/2024,320,200,120,Partially Paid
+123,123,Geisinger Health Plan,SSSS998877665,8/20/2024,400,400,0,Paid
+124,124,Medica,TTTT998877665,8/21/2024,180,0,180,Unpaid
+125,125,Providence Health Plan,UUUU998877665,8/22/2024,210,210,0,Paid
+126,126,Priority Health,VVVV998877665,8/23/2024,190,150,40,Partially Paid
+127,127,Blue Cross and Blue Shield of Minnesota,WWWW998877665,8/24/2024,280,280,0,Paid
+128,128,SelectHealth,XXXX998877665,8/25/2024,320,250,70,Partially Paid
+129,129,Health Alliance Plan (HAP),YYYY998877665,8/26/2024,400,0,400,Unpaid
+130,130,Blue Cross Blue Shield of Michigan,ZZZZ998877665,8/27/2024,180,180,0,Paid
+131,131,Premera Blue Cross,AAAAA998877665,8/28/2024,220,220,0,Paid
+132,132,Independence Blue Cross,BBBBB998877665,8/29/2024,250,200,50,Partially Paid
+133,133,Regence BlueShield,CCCCC998877665,8/30/2024,300,0,300,Unpaid
+134,134,Blue Cross Blue Shield of Nebraska,DDDDD998877665,8/31/2024,350,350,0,Paid
+135,135,Cambia Health Solutions,EEEEE998877665,9/1/2024,180,100,80,Partially Paid
+136,136,Blue Cross Blue Shield of North Carolina,FFFFF998877665,9/2/2024,200,200,0,Paid
+137,137,Blue Cross Blue Shield of South Carolina,GGGGG998877665,9/3/2024,240,240,0,Paid
+138,138,Blue Cross Blue Shield of Utah,HHHHH998877665,9/4/2024,280,280,0,Paid
+139,139,Blue Cross Blue Shield of Nevada,IIIII998877665,9/5/2024,320,200,120,Partially Paid
+140,140,Blue Cross Blue Shield of Oregon,JJJJJ998877665,9/6/2024,400,400,0,Paid
+141,141,Blue Cross Blue Shield of Washington,KKKKK998877665,9/7/2024,180,0,180,Unpaid
+142,142,Blue Cross Blue Shield of Colorado,LLLLL998877665,9/8/2024,210,210,0,Paid
+143,143,Blue Cross Blue Shield of New York,MMMMM998877665,9/9/2024,190,150,40,Partially Paid
+144,144,Blue Cross Blue Shield of Pennsylvania,NNNNN998877665,9/10/2024,280,280,0,Paid
+145,145,Blue Cross Blue Shield of Ohio,OOOOO998877665,9/11/2024,320,250,70,Partially Paid
+146,146,Blue Cross Blue Shield of Indiana,PPPPP998877665,9/12/2024,400,0,400,Unpaid
+147,147,Blue Cross Blue Shield of Michigan,QQQQQ998877665,9/13/2024,180,180,0,Paid
+148,148,Blue Cross Blue Shield of Wisconsin,RRRRR998877665,9/14/2024,220,220,0,Paid
+149,149,Blue Cross Blue Shield of Illinois,SSSSS998877665,9/15/2024,250,200,50,Partially Paid
+150,150,Blue Cross Blue Shield of Illinois,TTTTT998877665,9/16/2024,300,0,300,Unpaid

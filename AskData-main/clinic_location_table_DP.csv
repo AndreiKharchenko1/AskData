@@ -1,0 +1,26 @@
+﻿location_id,clinic_id,location_name,address,city,state,country,postal_code
+1,1,Ketchup Clinic,123 Oak Street,New York,NY,USA,10001
+2,2,Ketchup Clinic,456 Maple Avenue,Los Angeles,CA,USA,90001
+3,3,Ketchup Clinic,789 Pine Boulevard,Chicago,IL,USA,60601
+4,4,Ketchup Clinic,987 Cedar Lane,Houston,TX,USA,77001
+5,5,Ketchup Clinic,321 Elm Street,Miami,FL,USA,33101
+6,6,Ketchup Clinic,654 Birch Road,San Francisco,CA,USA,94101
+7,7,Ketchup Clinic,876 Spruce Avenue,Philadelphia,PA,USA,19101
+8,8,Ketchup Clinic,210 Walnut Drive,Seattle,WA,USA,98101
+9,9,Ketchup Clinic,543 Ash Street,Denver,CO,USA,80201
+10,10,Ketchup Clinic,789 Hickory Lane,Atlanta,GA,USA,30301
+11,11,Ketchup Clinic,987 Poplar Court,Boston,MA,USA,2101
+12,12,Ketchup Clinic,234 Birchwood Drive,Dallas,TX,USA,75201
+13,13,Ketchup Clinic,876 Ocean Avenue,San Diego,CA,USA,92101
+14,14,Ketchup Clinic,345 Summit Road,Phoenix,AZ,USA,85001
+15,15,Ketchup Clinic,789 Canyon Boulevard,Las Vegas,NV,USA,89101
+16,16,Ketchup Clinic,987 Harborview Terrace,Portland,OR,USA,97201
+17,17,Ketchup Clinic,123 Sunset Drive,Minneapolis,MN,USA,55401
+18,18,Ketchup Clinic,456 Sunrise Avenue,Detroit,MI,USA,48201
+19,19,Ketchup Clinic,789 Meadow Lane,Charlotte,NC,USA,28201
+20,20,Ketchup Clinic,987 River Road,Nashville,TN,USA,37201
+21,21,Ketchup Clinic,321 Forest Street,Orlando,FL,USA,32801
+22,22,Ketchup Clinic,654 Urban Avenue,Indianapolis,IN,USA,46201
+23,23,Ketchup Clinic,876 Suburban Lane,Baltimore,MD,USA,21201
+24,24,Ketchup Clinic,210 Lakeshore Drive,Salt Lake City,UT,USA,84101
+25,25,Ketchup Clinic,543 Seaside Court,Austin,TX,USA,78701
