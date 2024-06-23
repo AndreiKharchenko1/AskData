@@ -82,6 +82,7 @@ aside {
 }
 .chat-container .input-box {
     display: flex;
+    margin-top: 15px; /* Add margin-top to move down 15 pixels */
 }
 .chat-container .input-box input[type="text"] {
     flex: 1;
