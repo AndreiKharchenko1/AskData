@@ -4,6 +4,7 @@ import os
 from ResponseAugmentation import *
 from QueryAugmentation import *
 from BusinessDomains import *
+from DataWrangler import DataWrangler
 
 # loading the .env file so that the API_KEY is available
 from dotenv import load_dotenv
@@ -17,6 +18,7 @@ if not GEMINI_API_KEY:
 
 # the rest:
 app = Flask(__name__)
+dw = DataWrangler()
 
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
@@ -58,15 +60,16 @@ def ask():
         business_domain = get_business_domain(user_input)
 
         if business_domain == 'no domain':
-            # Generate response
-            response = model.generate_content(standard_prompt + user_input_augmented)
+            # Generate response using Data Wrangler
+            data_response = dw.generate_response(user_input)
+            response = model.generate_content(standard_prompt + user_input_augmented + '\n' + data_response)
             response = response.text
         else:
             # generate domain-specific response
             domain_prompt = domain_prompt.format(business_domain)
-            response = model.generate_content(domain_prompt + user_input_augmented)
+            data_response = dw.generate_response(user_input)
+            response = model.generate_content(domain_prompt + user_input_augmented + '\n' + data_response)
             response = response.text
-
 
     # perform response augmentation
     response = response_augmentation(response)

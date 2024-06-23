@@ -1,0 +1,151 @@
+﻿dispensation_id,patient_id,medication,dispensation_date,dosage,doctor_id,refill
+1,1,Lisinopril,2/11/2023,10mg daily,1,Yes
+2,2,Metformin,11/15/2022,500mg twice daily,2,Yes
+3,3,Albuterol,6/5/2021,As needed,3,No
+4,4,Sumatriptan,1/22/2023,50mg as needed,4,Yes
+5,5,Levothyroxine,9/13/2020,75mcg daily,5,Yes
+6,6,Amlodipine,4/11/2022,5mg daily,6,Yes
+7,7,Glipizide,9/19/2022,5mg daily,7,No
+8,8,Fluticasone,8/14/2021,2 puffs daily,8,Yes
+9,9,Topiramate,10/23/2022,25mg daily,9,Yes
+10,10,Synthroid,11/30/2021,50mcg daily,10,Yes
+11,11,Losartan,7/27/2022,50mg daily,11,No
+12,12,Januvia,1/18/2023,100mg daily,12,Yes
+13,13,Montelukast,3/5/2021,10mg daily,13,Yes
+14,14,Propranolol,5/25/2022,40mg daily,14,Yes
+15,15,Armour Thyroid,2/11/2020,60mg daily,15,Yes
+16,16,Benazepril,6/15/2021,20mg daily,16,Yes
+17,17,Glyburide,12/28/2022,5mg daily,17,Yes
+18,18,Beclomethasone,4/8/2021,2 puffs daily,18,No
+19,19,Rizatriptan,8/30/2023,10mg as needed,19,Yes
+20,20,Cytomel,5/16/2020,25mcg daily,20,No
+21,21,Enalapril,11/22/2021,10mg daily,21,Yes
+22,22,Pioglitazone,9/14/2022,30mg daily,22,Yes
+23,23,Advair,2/18/2021,1 puff daily,23,Yes
+24,24,Erenumab,7/6/2022,70mg monthly,24,Yes
+25,25,Nature-Throid,12/3/2020,65mg daily,25,Yes
+26,26,Quinapril,1/10/2022,20mg daily,1,Yes
+27,27,Sitagliptin,10/27/2022,100mg daily,2,Yes
+28,28,Budesonide,3/12/2021,2 puffs daily,3,No
+29,29,Amitriptyline,6/28/2023,25mg daily,4,Yes
+30,30,Levoxyl,4/5/2020,50mcg daily,5,Yes
+31,31,Irbesartan,8/13/2021,150mg daily,6,Yes
+32,32,Repaglinide,5/19/2022,1mg before meals,7,Yes
+33,33,Xolair,7/23/2021,150mg monthly,8,Yes
+34,34,Naratriptan,2/20/2023,2.5mg as needed,9,Yes
+35,35,Thyrolar,11/7/2020,1 tablet daily,10,No
+36,36,Labetalol,9/1/2021,200mg twice daily,11,Yes
+37,37,Rosiglitazone,6/4/2023,4mg daily,12,No
+38,38,Cromolyn,8/21/2020,2 puffs daily,13,Yes
+39,39,Dihydroergotamine,3/27/2022,1mg as needed,14,No
+40,40,Liothyronine,11/19/2020,5mcg daily,15,Yes
+41,41,Valsartan,5/10/2022,80mg daily,16,Yes
+42,42,Linagliptin,4/1/2023,5mg daily,17,Yes
+43,43,Mometasone,7/13/2021,2 puffs daily,18,Yes
+44,44,Zolmitriptan,11/20/2022,2.5mg as needed,19,Yes
+45,45,Euthyrox,2/22/2020,50mcg daily,20,No
+46,46,Ramipril,1/7/2022,10mg daily,21,Yes
+47,47,Saxagliptin,10/29/2022,5mg daily,22,Yes
+48,48,Zafirlukast,5/17/2021,20mg twice daily,23,Yes
+49,49,Frovatriptan,8/30/2023,2.5mg as needed,24,Yes
+50,50,Unithroid,4/13/2020,25mcg daily,25,Yes
+51,51,Carvedilol,10/11/2022,12.5mg twice daily,1,Yes
+52,52,Canagliflozin,8/19/2022,100mg daily,2,Yes
+53,53,Theophylline,12/14/2021,200mg daily,3,Yes
+54,54,Frovatriptan,7/23/2022,2.5mg as needed,4,Yes
+55,55,Cytomel,9/30/2021,25mcg daily,5,Yes
+56,56,Verapamil,11/27/2022,240mg daily,6,Yes
+57,57,Glimepiride,4/18/2023,2mg daily,7,Yes
+58,58,Salbutamol,6/5/2021,As needed,8,No
+59,59,Eletriptan,5/20/2022,40mg as needed,9,Yes
+60,60,Synthroid,1/11/2020,50mcg daily,10,Yes
+61,61,Olmesartan,8/7/2021,20mg daily,11,Yes
+62,62,Empagliflozin,3/24/2023,10mg daily,12,Yes
+63,63,Ipratropium,5/8/2021,2 puffs as needed,13,No
+64,64,Rizatriptan,12/30/2023,10mg as needed,14,Yes
+65,65,Levoxyl,4/16/2020,50mcg daily,15,Yes
+66,66,Captopril,9/22/2021,25mg twice daily,16,Yes
+67,67,Dapagliflozin,7/14/2022,5mg daily,17,No
+68,68,Tiotropium,2/17/2021,1 inhalation daily,18,Yes
+69,69,Zomig,6/5/2022,2.5mg as needed,19,Yes
+70,70,Levothroid,3/13/2020,25mcg daily,20,Yes
+71,71,Eprosartan,11/10/2021,600mg daily,21,Yes
+72,72,Glyxambi,10/21/2022,10mg/5mg daily,22,Yes
+73,73,Zafirlukast,4/2/2021,20mg twice daily,23,Yes
+74,74,Naratriptan,8/15/2023,2.5mg as needed,24,Yes
+75,75,Thyrolar,5/22/2020,1 tablet daily,25,Yes
+76,76,Fosinopril,1/7/2022,20mg daily,1,Yes
+77,77,Glibenclamide,11/14/2022,5mg daily,2,Yes
+78,78,Formoterol,6/18/2021,1 inhalation daily,3,No
+79,79,Dihydroergotamine,3/27/2022,1mg as needed,4,No
+80,80,Thyrogen,2/22/2020,0.9mg as directed,5,No
+81,81,Perindopril,9/18/2021,8mg daily,6,Yes
+82,82,Glyburide,5/30/2023,5mg daily,7,Yes
+83,83,Zileuton,7/2/2020,600mg twice daily,8,Yes
+84,84,Almotriptan,12/8/2022,12.5mg as needed,9,Yes
+85,85,Levothroid,11/19/2021,50mcg daily,10,Yes
+86,86,Valsartan,8/16/2022,80mg daily,11,Yes
+87,87,Metformin,4/14/2023,500mg twice daily,12,Yes
+88,88,Tiotropium,6/10/2021,1 inhalation daily,13,Yes
+89,89,Zolmitriptan,5/5/2022,2.5mg as needed,14,Yes
+90,90,Euthyrox,2/17/2020,50mcg daily,15,Yes
+91,91,Irbesartan,11/7/2021,150mg daily,16,Yes
+92,92,Pioglitazone,10/20/2022,30mg daily,17,Yes
+93,93,Mometasone,5/1/2021,2 puffs daily,18,Yes
+94,94,Eletriptan,8/12/2023,40mg as needed,19,Yes
+95,95,Levothyroxine,3/16/2020,75mcg daily,20,Yes
+96,96,Losartan,9/25/2021,50mg daily,21,No
+97,97,Januvia,6/5/2023,100mg daily,22,Yes
+98,98,Fluticasone,4/8/2020,2 puffs daily,23,Yes
+99,99,Sumatriptan,7/15/2022,50mg as needed,24,Yes
+100,100,Armour Thyroid,2/18/2021,60mg daily,25,Yes
+101,101,Amlodipine,3/5/2023,5mg daily,1,Yes
+102,102,Metformin,1/10/2023,500mg twice daily,2,Yes
+103,103,Albuterol,7/2/2021,As needed,3,No
+104,104,Sumatriptan,2/24/2023,50mg as needed,4,Yes
+105,105,Levothyroxine,10/18/2020,75mcg daily,5,Yes
+106,106,Amlodipine,12/1/2022,10mg daily,6,Yes
+107,107,Metformin,5/5/2022,850mg daily,7,Yes
+108,108,Fluticasone,11/9/2021,2 puffs daily,8,Yes
+109,109,Topiramate,8/14/2023,25mg daily,9,Yes
+110,110,Synthroid,3/23/2022,50mcg daily,10,Yes
+111,111,Lisinopril,6/20/2022,10mg daily,11,No
+112,112,Januvia,12/11/2023,100mg daily,12,Yes
+113,113,Montelukast,2/13/2021,10mg daily,13,Yes
+114,114,Propranolol,9/15/2022,40mg daily,14,Yes
+115,115,Armour Thyroid,4/11/2020,60mg daily,15,Yes
+116,116,Benazepril,1/20/2021,20mg daily,16,Yes
+117,117,Glyburide,7/23/2023,5mg daily,17,Yes
+118,118,Beclomethasone,8/19/2021,2 puffs daily,18,No
+119,119,Rizatriptan,4/27/2023,10mg as needed,19,Yes
+120,120,Cytomel,6/5/2020,25mcg daily,20,No
+121,121,Enalapril,9/11/2021,10mg daily,21,Yes
+122,122,Pioglitazone,2/14/2023,30mg daily,22,Yes
+123,123,Advair,1/15/2021,1 puff daily,23,Yes
+124,124,Erenumab,10/19/2022,70mg monthly,24,Yes
+125,125,Nature-Throid,3/22/2020,65mg daily,25,Yes
+126,126,Quinapril,4/12/2022,20mg daily,1,Yes
+127,127,Sitagliptin,1/29/2023,100mg daily,2,Yes
+128,128,Budesonide,9/18/2021,2 puffs daily,3,No
+129,129,Amitriptyline,11/22/2023,25mg daily,4,Yes
+130,130,Levoxyl,2/17/2020,50mcg daily,5,Yes
+131,131,Irbesartan,10/20/2021,150mg daily,6,Yes
+132,132,Repaglinide,6/19/2022,1mg before meals,7,Yes
+133,133,Xolair,12/24/2021,150mg monthly,8,Yes
+134,134,Naratriptan,8/10/2023,2.5mg as needed,9,Yes
+135,135,Thyrolar,5/15/2020,1 tablet daily,10,No
+136,136,Labetalol,2/1/2021,200mg twice daily,11,Yes
+137,137,Rosiglitazone,7/21/2023,4mg daily,12,No
+138,138,Cromolyn,3/5/2020,2 puffs daily,13,Yes
+139,139,Dihydroergotamine,12/27/2022,1mg as needed,14,No
+140,140,Liothyronine,6/19/2020,5mcg daily,15,Yes
+141,141,Valsartan,4/10/2022,80mg daily,16,Yes
+142,142,Linagliptin,1/1/2023,5mg daily,17,Yes
+143,143,Mometasone,8/13/2021,2 puffs daily,18,Yes
+144,144,Zolmitriptan,12/20/2022,2.5mg as needed,19,Yes
+145,145,Euthyrox,4/22/2020,50mcg daily,20,No
+146,146,Ramipril,3/7/2022,10mg daily,21,Yes
+147,147,Saxagliptin,12/29/2022,5mg daily,22,Yes
+148,148,Zafirlukast,7/17/2021,20mg twice daily,23,Yes
+149,149,Frovatriptan,10/30/2023,2.5mg as needed,24,Yes
+150,150,Unithroid,6/13/2020,25mcg daily,25,Yes

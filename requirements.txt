@@ -1,3 +1,10 @@
 setuptools~=58.0.4
 python-dotenv~=1.0.1
 flask~=3.0.3
+pandas~=1.3.5
+sqlalchemy~=2.0.30
+langchain-community~=0.0.20
+langchain-core~=0.1.23
+langchain~=0.0.354
+google-generativeai~=0.4.0
+pandas==2.2.2
