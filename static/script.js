@@ -21,15 +21,20 @@ function straighten(message) {
     return newMessage;
   }
   function prettifyMe(textContent) {
-    // Replace '***' with HTML <b><i> tags for bold and italic text
-    textContent = textContent.replace(/\*\*\*(.*?)\*\*\*/g, '<b><i>$1</i></b>');
-
-    // Replace '**' with HTML <b> tags for bold text
+    // Replace '**' with HTML <b><i> tags for bold and italic text
     textContent = textContent.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+  // Replace '*' with HTML <i> tags for boldened special text
+    textContent = textContent.replace(/\`\`(.*?)\`\`/g, 
+  "<span style='font-weight: bold; font-size: 15px;'>$1</span>");
 
     // Replace '*' with HTML <i> tags for italic text
-    textContent = textContent.replace(/\*(.*?)\*/g, '<i>$1</i>');
+    textContent = textContent.replace(/\*\*\*(.*?)\*\*\*/g, '<i>$1</i>');
 
+    // Replace '--' with HTML <i> tags for italic text
+    textContent = textContent.replace(/\-(.*?)\-/g, '<br>$1</br>');
+    //Replace ``` with boldened special color text
+    textContent = textContent.replace(/\`\`\`(.*?)\`\`\`/g, 
+        "<span style='font-weight: bold; font-size: 15px; text-color: purple;'>$1</span>");
     // Replace triple backticks ''' with <pre><code> tags for code blocks
     textContent = textContent.replace(/'''(.*?)'''/gs, '<pre><code>$1</code></pre>');
 
@@ -44,8 +49,10 @@ function straighten(message) {
     // Custom formatting for bullet points
     textContent = textContent.replace(/(\* .+?)/g, '<span style="color: brown; font-size: 1em;">$1</span>');
 
-    return textContent;
+    return textContent; 
+
 }
+
 function sendMessage() {
     var userInput = document.getElementById('user_input').value;
 
@@ -82,6 +89,7 @@ function sendMessage() {
 
         var text = document.createElement('span');
         var prettyResponse = prettifyMe(aiResponse);
+        console.log(aiResponse)
         text.innerHTML = '<span style="color: #089799;">AskData: </span>' + prettyResponse;
         botMessage.appendChild(text);
 
