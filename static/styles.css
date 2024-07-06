@@ -1,80 +1,74 @@
 body {
     font-family: "Courier New", Courier, monospace;
-    background-image: url("https://i.imgur.com/0y8H5CV.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: white;
 }
-h1 {
-    font-family: 'Comic Sans MS', cursive;
-    font-size: 30px;
-    color: #000000;
 
+h1 {
+    font-family: 'Arial';
+    font-size: 35px;
+    color: #000000;
 }
+
 .chat-container {
-    width: 75%;
-    max-width: 1900px; /* Set max-width to avoid stretching on larger screens */
-    margin: 50px auto;
-    border: 1px solid #ccc;
+    width: 90%;
+    height: 85vh; /* Adjusting for potential padding/margin */
+    max-height: 75vh; /* Maximum height to prevent overflow */
+    margin: 20px auto; /* Center with a smaller margin */
+    border: 2px solid #ccc;
     padding: 20px;
     border-radius: 5px;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Ensure padding is included in the height */
+    overflow: hidden; /* Prevent overflow issues */
     position: relative;
-    left: 2%; /* Adjust as needed for desired positioning */
-    background-color: rgb(251, 255, 240);
+    background-color: #f9f9f9; /* Optional background color */
 }
+
 p {
     color: #000000;
-   
     font-family: Verdana, Geneva, sans-serif;
-
     letter-spacing: 1px; 
 }
 .center {
     text-align: center;
+    font-family: 'Arial';
+    font-size: 20px;
 }
 .chat-box::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    width: 12px;
 }
 
 .chat-box::-webkit-scrollbar-thumb {
-    background-color: purple; /* Color of the scrollbar thumb */
-    border-radius: 6px; /* Rounded corners for the thumb */
+    background-color: purple;
+    border-radius: 6px;
 }
 
 .chat-box::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Background color of the scrollbar track */
 }
 .message {
-    background-color: #addfae; /* Light blue background */
-    font-size: 15px; /* Text size */
-    font-family: 'Comic Sans MS', cursive; /* Comic Sans font */
+    background-color: lightgrey; /* Light blue background */
+    font-size: 20px; /* Text size */
+    font-family: 'Arial';
 }
 .bot-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 .message-bot {
-    background-color: #cefcff; /* Light blue background */
-    border: 2px solid rgb(255, 210, 126); /* Orange outline */
+    background-color: lightcyan; /* Light blue background */
+    border: 2px solid #f152a2; /* pink outline */
     border-radius: 8px; /* Rounded corners */
     padding: 8px; /* Padding around the message */
     margin-bottom: 10px; /* Margin between messages */
-    font-weight: bold; /* Bold text */
-    font-family: 'Comic Sans MS'; /* Comic Sans font */
+    font-family: 'Arial'; /* Comic Sans font */
 }
-aside {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0 1.5%;
-    width: 30%;
-    z-index: 1; /* Ensures the aside is on top of other content */
-}
+aside { float: right; margin: 0 1.5%; width: 30%; }
+
 .chat-container .chat-box {
     overflow-y: scroll;
-    max-height: 800px;
-    min-height: 100px;
+    max-height: 90%;
+    min-height: 90%;
     padding: 10px;
     border: 2px solid #d3bdbd;
     border-radius: 5px;
@@ -82,7 +76,6 @@ aside {
 }
 .chat-container .input-box {
     display: flex;
-    margin-top: 15px; /* Add margin-top to move down 15 pixels */
 }
 .chat-container .input-box input[type="text"] {
     flex: 1;
@@ -90,12 +83,13 @@ aside {
     border-radius: 5px;
     border: 4px solid #f152a2;
     margin-right: 5px;
+    font-family: 'Arial';
+    font-size: 20px;
 }
 .chat-container .input-box button {
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    font-style: bold;
     background-color: #27b913;
     color: hsl(17, 100%, 95%);
     cursor: pointer;
@@ -124,12 +118,32 @@ aside {
     margin-left: 10px;
 }
 .chat-container .message-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
 }
 .FAU-icon {
-    width: 50px;
-    height: 35px;
-    margin-right: 10px;
+    width: 150px;
+    margin-right: 15px;
+}
+
+.AskData-icon {
+    width: 400px;
+    margin-left: 15px;
+}
+
+.developer-icon {
+    width: 500px;
+    margin-left: 15px;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* or space-around */
+    align-items: center;
+    gap: 20px;
+    width: 100%; /* Make the container full width */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
 }
