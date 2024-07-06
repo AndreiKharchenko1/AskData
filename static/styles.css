@@ -5,22 +5,27 @@ body {
 
 h1 {
     font-family: 'Arial';
-    font-size: 30px;
+    font-size: 35px;
     color: #000000;
-
 }
 
 .chat-container {
     width: 90%;
-    max-width: 1900px; /* Set max-width to avoid stretching on larger screens */
-    margin: 30px auto;
-    border: 1px solid #ccc;
+    height: 85vh; /* Adjusting for potential padding/margin */
+    max-height: 90vh; /* Maximum height to prevent overflow */
+    margin: 20px auto; /* Center with a smaller margin */
+    border: 2px solid #ccc;
     padding: 20px;
     border-radius: 5px;
-    height: 72vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Ensure padding is included in the height */
+    overflow: hidden; /* Prevent overflow issues */
     position: relative;
-
+    background-color: #f9f9f9; /* Optional background color */
+    font-size: 30px;
 }
+
 p {
     color: #000000;
     font-family: Verdana, Geneva, sans-serif;
@@ -28,6 +33,8 @@ p {
 }
 .center {
     text-align: center;
+    font-family: 'Arial';
+    font-size: 20px;
 }
 .chat-box::-webkit-scrollbar {
     width: 12px;
@@ -42,12 +49,12 @@ p {
 }
 .message {
     background-color: lightgrey; /* Light blue background */
-    font-size: 15px; /* Text size */
+    font-size: 30px; /* Text size */
     font-family: 'Arial';
 }
 .bot-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 .message-bot {
     background-color: lightcyan; /* Light blue background */
@@ -77,12 +84,13 @@ aside { float: right; margin: 0 1.5%; width: 30%; }
     border-radius: 5px;
     border: 4px solid #f152a2;
     margin-right: 5px;
+    font-family: 'Arial';
+    font-size: 25px;
 }
 .chat-container .input-box button {
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    font-style: bold;
     background-color: #27b913;
     color: hsl(17, 100%, 95%);
     cursor: pointer;
@@ -111,25 +119,32 @@ aside { float: right; margin: 0 1.5%; width: 30%; }
     margin-left: 10px;
 }
 .chat-container .message-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
 }
 .FAU-icon {
-    width: 80px;
-    height: 56px;
+    width: 200px;
     margin-right: 15px;
 }
 
 .AskData-icon {
-    width: 300px;
-    height: 75px;
+    width: 500px;
     margin-left: 15px;
 }
 
+.developer-icon {
+    width: 600px;
+    margin-left: 15px;
+    text-align: center;
+}
+
 .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
+    display: flex;
+    justify-content: space-between; /* or space-around */
+    align-items: center;
+    gap: 20px;
+    width: 100%; /* Make the container full width */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+}
