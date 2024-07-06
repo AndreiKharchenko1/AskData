@@ -12,7 +12,7 @@ h1 {
 .chat-container {
     width: 90%;
     height: 85vh; /* Adjusting for potential padding/margin */
-    max-height: 90vh; /* Maximum height to prevent overflow */
+    max-height: 75vh; /* Maximum height to prevent overflow */
     margin: 20px auto; /* Center with a smaller margin */
     border: 2px solid #ccc;
     padding: 20px;
@@ -23,7 +23,6 @@ h1 {
     overflow: hidden; /* Prevent overflow issues */
     position: relative;
     background-color: #f9f9f9; /* Optional background color */
-    font-size: 30px;
 }
 
 p {
@@ -49,7 +48,7 @@ p {
 }
 .message {
     background-color: lightgrey; /* Light blue background */
-    font-size: 30px; /* Text size */
+    font-size: 20px; /* Text size */
     font-family: 'Arial';
 }
 .bot-icon {
@@ -85,7 +84,7 @@ aside { float: right; margin: 0 1.5%; width: 30%; }
     border: 4px solid #f152a2;
     margin-right: 5px;
     font-family: 'Arial';
-    font-size: 25px;
+    font-size: 20px;
 }
 .chat-container .input-box button {
     padding: 10px 20px;
@@ -124,17 +123,17 @@ aside { float: right; margin: 0 1.5%; width: 30%; }
     margin-right: 10px;
 }
 .FAU-icon {
-    width: 200px;
+    width: 150px;
     margin-right: 15px;
 }
 
 .AskData-icon {
-    width: 500px;
+    width: 400px;
     margin-left: 15px;
 }
 
 .developer-icon {
-    width: 600px;
+    width: 500px;
     margin-left: 15px;
     text-align: center;
 }
