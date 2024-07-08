@@ -18,7 +18,7 @@ if not GEMINI_API_KEY:
 
 # the rest:
 app = Flask(__name__)
-dw = DataWrangler()
+dw = DataWrangler(GEMINI_API_KEY)
 
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
