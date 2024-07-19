@@ -29,8 +29,9 @@ jobs:
         run: python -m build
       - name: Run AskDataDisplay.py in background
         run: |
-          nohup python AskDataDisplay.py &
+          nohup python AskDataDisplay.py > flask.log 2>&1 &
           sleep 10  # Give the server some time to start
+          cat flask.log  # Print the Flask log
       - name: Check if Flask app is running
         run: |
           curl -f http://127.0.0.1:5000 || { echo "Flask app is not running"; exit 1; }
