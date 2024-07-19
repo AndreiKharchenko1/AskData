@@ -12,36 +12,44 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
           python-version: '3.x'
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install setuptools  # Install setuptools
+          pip install setuptools
           pip install build
           pip install google-generativeai
           pip install google-cloud-aiplatform
           pip install python-dotenv
           pip install flask
+
       - name: Build package
         run: python -m build
+
       - name: Run AskDataDisplay.py in background
         run: |
           nohup python AskDataDisplay.py > flask.log 2>&1 &
-          sleep 10  # Give the server some time to start
+          sleep 20  # Increase sleep time to give the server more time to start
           cat flask.log  # Print the Flask log
+
       - name: Check if Flask app is running
         run: |
           curl -f http://127.0.0.1:5000 || { echo "Flask app is not running"; exit 1; }
+
       - name: Install project
         run: |
           python setup.py install  # Install the project using setup.py
+
       - name: Install latest ngrok
         run: |
           wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
           tar xvzf ngrok-v3-stable-linux-amd64.tgz
+
       - name: Expose localhost with ngrok
         run: |
           ./ngrok authtoken 2gLE4hEHA2gc3HdZBeXZj6JjklN_5UMjUvUjdYXdyZUmrCoMr
