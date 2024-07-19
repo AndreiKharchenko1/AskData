@@ -34,8 +34,8 @@ jobs:
       - name: Run AskDataDisplay.py in background
         run: |
           nohup python AskDataDisplay.py > flask.log 2>&1 &
-          sleep 20  # Increase sleep time to give the server more time to start
-          cat flask.log  # Print the Flask log
+          sleep 30  # Increased sleep time to give the server more time to start
+          cat flask.log  # Print the Flask log to verify it's running
 
       - name: Check if Flask app is running
         run: |
