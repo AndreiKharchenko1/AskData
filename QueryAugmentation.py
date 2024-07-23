@@ -14,7 +14,6 @@ def query_augmentation(user_input):
     return keyword_check(user_input)
 
 
-user_input_test = 'I like shotguns.'
-test = query_augmentation(user_input_test)
-
-print(test)
+#user_input_test = 'I like shotguns.'
+#test = query_augmentation(user_input_test)
+#print(test)

@@ -5,14 +5,11 @@ from ResponseAugmentation import *
 from QueryAugmentation import *
 from BusinessDomains import *
 from DataWrangler import DataWrangler
+from databasetest import *
 
 # loading the .env file so that the API_KEY is available
 from dotenv import load_dotenv
 load_dotenv()
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-
 
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
@@ -22,7 +19,7 @@ if not GEMINI_API_KEY:
 
 # the rest:
 app = Flask(__name__)
-dw = DataWrangler()
+dw = DataWrangler(GEMINI_API_KEY)
 
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
@@ -75,8 +72,21 @@ def ask():
             response = model.generate_content(domain_prompt + user_input_augmented + '\n' + data_response)
             response = response.text
 
-    # perform response augmentation
+
+    print("response: ", response)
+
+    extracted_sql = extractSQL(response)
+    for sql in extracted_sql:
+        formatted_sql_result = testQuery(sql)
+        if formatted_sql_result != None: # & len(extracted_sql) == 1:
+            response = response + '\n\n' + "For Ketchup Clinic, this SQL returns the following data:" + '\n' + formatted_sql_result
+
+        else:
+            response = response + '\n' + sql + '\n\n' + "For Ketchup Clinic, this SQL did not return a valid result, please test it before using it."
+
+
     response = response_augmentation(response)
+    response = transform_to_html(response)
 
     return response
 

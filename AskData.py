@@ -66,6 +66,7 @@ while True:
             domain_prompt = domain_prompt.format(business_domain)
             print("model receives: ", domain_prompt + user_input_augmented)
             response = model.generate_content(domain_prompt + user_input_augmented)
+            print("original response: ", response)
             response = response.text
 
     # perform response augmentation
