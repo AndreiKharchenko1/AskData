@@ -15,8 +15,7 @@ class DataWrangler:
             'patient': pd.read_csv('newData/patient_table_DP (1).csv'),
             'patient_treatment': pd.read_csv('newData/patient_treatment_table_DP (1).csv'),
             'physician': pd.read_csv('newData/physician_table_DP (1).csv'),
-            # 'treatments_costs': pd.read_csv(
-            #    '/Users/danielazafrani/Documents/GitHub/hw1-DanielAzafrani/AskData/newData/treatments_costs table_DP.csv'),
+            'treatments_costs': pd.read_csv('newData/treatments_costs table_DP.csv'),
             'billing_and_insurance': pd.read_csv('newData/billing_and_insurance_table_DP (1).csv'),
             'clinic_expense': pd.read_csv('newData/clinic_expense_table_DP (1).csv'),
             'clinic_inventory': pd.read_csv('newData/clinic_inventory_table_DP (1).csv')
@@ -33,19 +32,18 @@ class DataWrangler:
 
     def generate_description(self, df_name):
         descriptions = {
-            'clinic_inventory': "This data frame contains information about the clinic's inventory, including supplies, stock, materials, and equipment.",
             'clinic_location': "This data frame contains detailed information about the physical locations of the clinics within the system, including addresses, geographic coordinates, and contact details.",
             'clinic_profitability': "This data frame contains financial information about the clinic's profitability, including revenue, expenses, and financial metrics.",
             'medical_dispensation': "This data frame contains information about medical dispensations, including medication, dosage, prescription details, and patient information.",
             'medical_history': "This data frame contains the medical history of patients, including diagnoses, treatments received, health outcomes, and medical records.",
             'patient_appointment': "This data frame contains information about patient appointments, including visit details, consultation schedules, and appointment times.",
-            'patient': """
-IMPORTANT: THIS DATAFRAME HAS NOTHING TO DO WITH TREATMENTS. IGNORE THIS DF IF SEE TREATMENT IN USER QUERY.
-This data frame contains demographic and personal information about patients, including contact information and identity details.
-""",
+            'patient': "IMPORTANT: THIS DATAFRAME HAS NOTHING TO DO WITH TREATMENTS. IGNORE THIS DF IF SEE TREATMENT IN USER QUERY. This data frame contains demographic and personal information about patients, including contact information and identity details.",
             'patient_treatment': "This data frame contains information about patient treatments, including medical procedures, healthcare costs, therapy sessions, and treatment plans.",
             'physician': "This data frame contains information about physicians, including their qualifications, specializations, contact details, and roles within the clinic.",
-            'treatments_costs': "This data frame contains information about the costs of treatments, including prices, fees, and billing details."
+            'treatments_costs': "This data frame contains information about the costs of treatments, including prices, fees, and billing details.",
+            'billing_and_insurance': "This data frame contains information about the bills that have been created and on their status, e.g. the amount and if it has already been paid.",
+            'clinic_expense': "This data frame contains information about clinic expenses e.g. their utilities, medical supplies, salaries, total expenses but also information on yearly revenue.",
+            'clinic_inventory': "This data frame contains information about the clinic's inventory, including supplies, stock, materials, and equipment.",
         }
         return descriptions.get(df_name, "No description available.")
 
