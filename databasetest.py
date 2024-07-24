@@ -1,7 +1,7 @@
 import sqlite3
 import re
 
-response = """Certainly! An SQL statement for the `clinic_profitability` table might look like this:```sql SELECT * FROM clinic_profitability;``` This statement will select all rows from the `clinic_profitability` table. Here is an example of a more specific SQL statement that will select the `clinic_name`, `total_revenue`, and `total_expenses` columns for all rows in the `clinic_profitability` table where the `profit` is greater than $100,000: ```SELECT clinic_name, total_revenue, total_expenses FROM clinic_profitability WHERE profit > 100000;```"""
+response = """Certainly! An SQL statement for the `clinic_profitability` table might look like this:```sql SELECT * FROM clinic_inventory;``` This statement will select all rows from the `clinic_profitability` table. Here is an example of a more specific SQL statement that will select the `clinic_name`, `total_revenue`, and `total_expenses` columns for all rows in the `clinic_profitability` table where the `profit` is greater than $100,000: ```SELECT clinic_name, total_revenue, total_expenses FROM clinic_profitability WHERE profit > 100000;```"""
 
 def extractSQL(response):
     # Use regular expression to find text within triple backticks
@@ -20,7 +20,7 @@ def connect_to_database(db_file):
 
 # Function to execute a query and return the result along with column names
 def execute_query(query, params=None):
-    connection = connect_to_database('askdata.db')  # Replace 'askdata.db' with your actual .db file name
+    connection = connect_to_database('askdatanew.db')  # Replace 'askdata.db' with your actual .db file name
     if connection is None:
         return None, None
     try:
@@ -72,7 +72,7 @@ def format_query_results(column_names, rows):
 extracted_sql = extractSQL(response)
 for sql in extracted_sql:
     print("sql:", sql)
-    print("testquery result: ")
+    #print("testquery result: ")
     testQuery(sql)
 
 
