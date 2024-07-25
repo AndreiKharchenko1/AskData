@@ -43,23 +43,16 @@ def testQuery(query):
     result, column_names = execute_query(query)
 
     if result and column_names:
-        print(column_names)
-        for row in result:
-            print(row)
+        #print(column_names)
+        #for row in result:
+        #    print(row)
         formatted_sql_result = format_query_results(column_names, result)
         return formatted_sql_result
     else:
-        print("No results or error in query execution")
-        return "No results or error in query execution"
+        print("For Ketchup Clinic, this SQL did not return a valid result, please test it before using it.")
+        return "For Ketchup Clinic, this SQL did not return a valid result, please test it before using it."
 
-'''
-def format_query_results(column_names, rows):
-    formatted_string = "\t".join(column_names) + "\n"
-    for row in rows:
-        formatted_string += "\t".join(map(str, row)) + "\n"
-    print("formatted_string", formatted_string)
-    return formatted_string
-'''
+
 def format_query_results(column_names, rows):
     formatted_string = "<table border='1'><tr><th>" + "</th><th>".join(column_names) + "</th></tr>"
     for row in rows:
@@ -69,11 +62,11 @@ def format_query_results(column_names, rows):
 
 
 # Test
-extracted_sql = extractSQL(response)
-for sql in extracted_sql:
-    print("sql:", sql)
+#extracted_sql = extractSQL(response)
+#for sql in extracted_sql:
+    #print("sql:", sql)
     #print("testquery result: ")
-    testQuery(sql)
+    #testQuery(sql)
 
 
 

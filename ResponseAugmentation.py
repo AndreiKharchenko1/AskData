@@ -1,8 +1,22 @@
 import re
 # this is the function for the query augmentation of the response received from the model
 def response_augmentation(response):
-    # response = ...
+    good_keywords = ["data", "sql", "management", "report", "dashboard", "support", "ketchup", "clinic", "quality"]
+    bad_keywords = ["gun", "violence", "drugs"]
+
+    if any(keyword in response for keyword in good_keywords):
+        print("response seems valid")
+    elif any(keyword in response for keyword in bad_keywords):
+        print("response invalid")
+    else:
+        print("can't determine the quality")
+
     return response
+
+
+# Example usage:
+response = "This is a sample response containing good2."
+response_augmentation(response)
 
 
 def transform_to_html(text):

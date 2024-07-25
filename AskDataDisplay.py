@@ -73,14 +73,13 @@ def ask():
             response = response.text
 
 
-    print("response: ", response)
+    #print("response: ", response)
 
     extracted_sql = extractSQL(response)
     for sql in extracted_sql:
         formatted_sql_result = testQuery(sql)
         if formatted_sql_result != None: # & len(extracted_sql) == 1:
             response = response + '\n\n' + "For Ketchup Clinic, this SQL returns the following data:" + '\n' + formatted_sql_result
-
         else:
             response = response + '\n' + sql + '\n\n' + "For Ketchup Clinic, this SQL did not return a valid result, please test it before using it."
 
