@@ -74,12 +74,14 @@ Please choose the most relevant data frame.
         response = self.model.generate_content(prompt)
         return self.extract_dataframe_name(response.text)
 
+
     def extract_dataframe_name(self, response_text):
         # Extract the data frame name from the response text
         for df_name in self.data_frames.keys():
             if df_name in response_text:
                 return df_name
         return None
+
 
     def read_and_match_dataframe(self, query):
         # Scan contents of each data frame and make an informed decision
@@ -92,11 +94,13 @@ Please choose the most relevant data frame.
                     return df_name
         return None
 
+
     def generate_sql_query(self, table_name, conditions=None):
         if conditions:
             return f"SELECT * FROM {table_name} WHERE {conditions};"
         else:
             return f"SELECT * FROM {table_name};"
+
 
     def generate_response(self, query):
         # First, try to use the Gemini model to choose the data frame
@@ -115,7 +119,6 @@ Please choose the most relevant data frame.
             match = re.search(r'where (.+)', query, re.IGNORECASE)
             conditions = match.group(1) if match else None
             sql_query = self.generate_sql_query(table_name, conditions)
-            #return f"Generated SQL Query:\n{sql_query}"
             return f"The {table_name} table contains the following columns: {', '.join(columns)}. An example data point: {example}"
 
         else:

@@ -1,6 +1,8 @@
 
 # this is the function for the query augmentation that the user input before sending it to the model
-keywords = ['gun', 'terrorism', 'suicide']
+keywords = ["gun", "violence", "drugs", "crime", "abuse", "illegal", "addiction", "theft", "corruption",
+            "harassment", "fraud", "assault", "trafficking", "murder", "scam", "exploitation",
+            "terrorism", "suicide"]
 
 
 def keyword_check(user_input):
@@ -12,8 +14,3 @@ def keyword_check(user_input):
 
 def query_augmentation(user_input):
     return keyword_check(user_input)
-
-
-#user_input_test = 'I like shotguns.'
-#test = query_augmentation(user_input_test)
-#print(test)
